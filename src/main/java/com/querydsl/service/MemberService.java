@@ -18,5 +18,8 @@ public class MemberService {
     public List<MemberTeamDto> search(MemberSearchCondition condition) {
         return memberRepository.search(condition);
     }
+    public List<MemberTeamDto> searchOld(MemberSearchCondition condition) {
+        return memberRepository.search(condition);
+    }
 }
 

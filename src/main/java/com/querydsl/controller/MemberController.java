@@ -17,7 +17,12 @@ public class MemberController
     private final MemberService memberService;
 
     @GetMapping
-    public List<MemberTeamDto> search(@RequestBody MemberSearchCondition condition) {
+    public List<MemberTeamDto> searchTeamId(@RequestBody MemberSearchCondition condition) {
         return memberService.search(condition);
     }
+    @GetMapping
+    public List<MemberTeamDto> searchOldest(@RequestBody MemberSearchCondition condition) {
+        return memberService.searchOld(condition);
+    }
+
 }
